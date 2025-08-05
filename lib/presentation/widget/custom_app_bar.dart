@@ -6,13 +6,13 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 20,right: 20),
+      padding: EdgeInsets.only(left: 40,right: 20),
       width: double.infinity,
-      height: 70,
-      color: Colors.amber,
+      height: 90,
+      color: Colors.black,
       child: Row(
         children: [
-          Text('POFEEX')
+          Text('POFEEX',style: TextStyle(color: Colors.blueAccent,fontSize: 30,fontWeight: FontWeight.bold),)
           
         ],
       ),
