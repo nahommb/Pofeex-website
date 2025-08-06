@@ -12,7 +12,7 @@ class CustomAppBar extends StatelessWidget {
       color: Colors.black,
       child: Row(
         children: [
-          Text('POFEEX',style: TextStyle(color: Colors.blueAccent,fontSize: 30,fontWeight: FontWeight.bold),)
+          Image.asset("images/logo.png",)
           
         ],
       ),
