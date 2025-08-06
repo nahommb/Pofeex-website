@@ -1,3 +1,5 @@
+import 'dart:html' as html;
+
 import 'package:flutter/material.dart';
 
 class Footer extends StatelessWidget {
@@ -8,18 +10,33 @@ class Footer extends StatelessWidget {
    'branding':'We will offer full-service brand strategy development — helping you stand out with clarity, story, and a long-term plan for growth. This includes brand voice, market positioning, and storytelling that resonates',
  };
 
+   void launchTelegram() {
+   html.window.open('https://t.me/Higuzo', '_blank');
+  
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 500,
+      // height: 500,
       width: double.infinity,
       // color: const Color.fromARGB(255, 83, 82, 82),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('The Problem',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold,color: Colors.blueAccent),),
-          Text('oiujio doawodia paowdpo oiuioiyhwyadctfte oiajdjlmal iwu90dw'),
-          Text('jwid dpwd0a pa wdawod poaiw0-id 09wjdw ad'),
+          Container(
+            width: double.infinity,
+            height: 100,
+            color: const Color.fromARGB(255, 209, 212, 214),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('Stay Connected',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold,color: Colors.white,)),
+                // Text('oiujio doawodia paowdpo oiuioiyhwyadctfte oiajdjlmal iwu90dw'),
+                // Text('jwid dpwd0a pa wdawod poaiw0-id 09wjdw ad'),
+              ],
+            )
+            ),
           SizedBox(height: 50,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -28,18 +45,40 @@ class Footer extends StatelessWidget {
               problemCard( name: 'Coming Soon: Full Branding Strategy',description:  cardData['branding']),
       
             ],
-          )
+          ),
+          SizedBox(height: 70,),
+          Text('Get Ready To Grow',style: TextStyle(fontSize: 30,color: Colors.blueAccent),),
+          SelectableText('Supercharge your online growth with a partner who’s dedicated to achieving your goals.'),
+          SizedBox(height: 10,),
+            SizedBox(
+                  height: 45,
+                  // width: 180,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blueAccent,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadiusGeometry.circular(10)
+                      )
+                    ),
+                    onPressed: (){
+                     launchTelegram();
+                    }, 
+                  child: Text("Let's Make It Happen",style: TextStyle(fontSize: 16,color: Colors.white),))
+                  ),
+            SizedBox(height: 30,)
         ],
       ),
     );
   }
+
+
   Container problemCard({required String name,required String description}){
     return Container(
       height: 200,
       width: 500,
       padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: Colors.blueAccent,
+        color: const Color.fromARGB(255, 81, 117, 179),
         borderRadius: BorderRadius.all(Radius.circular(20))
       ),
       child: Column(
