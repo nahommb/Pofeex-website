@@ -22,6 +22,7 @@ Map<dynamic,dynamic> serviceData = {
       // height: screenHeight*0.6,
       child: Column(
         // mainAxisAlignment: MainAxisAlignment.center,
+        //crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           SizedBox(height: 50,),
           Text("Our Services",style: TextStyle(fontSize: 35,color: Colors.blueAccent,fontWeight: FontWeight.bold),),
@@ -36,9 +37,33 @@ Map<dynamic,dynamic> serviceData = {
              
             ],
           ),
-          SizedBox(height: 30,),
+          SizedBox(height: 100,),
           Text('Why choose Pofeex',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.blueAccent),),
           Text('Local, Affordable, Result',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),),
+          SizedBox(height: 20,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.gpp_good_outlined,color: Colors.blueAccent,),
+              Text('We understand your market',style: TextStyle(fontSize: 20,color: Colors.blueAccent),),
+            ],
+          ),
+          SizedBox(height: 10,),
+                 Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.gpp_good_outlined,color: Colors.blueAccent,),
+              Text('Solutions for every badget',style: TextStyle(fontSize: 20,color: Colors.blueAccent),),
+            ],
+          ),
+          SizedBox(height: 10,),
+                 Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.gpp_good_outlined,color: Colors.blueAccent,),
+              Text('Dedecatedto your success',style: TextStyle(fontSize: 20,color: Colors.blueAccent),),
+            ],
+          ),
 
           SizedBox(height: 50,)
         ],
@@ -48,7 +73,7 @@ Map<dynamic,dynamic> serviceData = {
 
   Container serviceCard({required String name,required IconData iconData,required String description}) {
     return Container(
-              height: 400,
+              // height: 400,
               width: 400,
               // color: Colors.blueAccent,
               child: Column(

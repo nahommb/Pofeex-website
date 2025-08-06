@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class Footer extends StatelessWidget {
-  const Footer({super.key});
+  
+  Map<dynamic,dynamic> cardData = {
+  //  'Business Branding':'We develop strong brand identities that go beyond just logos. Our branding services create consistency across all customer touchpoints — building recognition, trust, and a loyal audience for your business.',
+   'smma':'Our Social Media Marketing services will help your business grow through targeted paid ads. We will handle audience targeting, ad creation, and performance tracking to get real results from every birr spent.',
+   'branding':'We will offer full-service brand strategy development — helping you stand out with clarity, story, and a long-term plan for growth. This includes brand voice, market positioning, and storytelling that resonates',
+ };
 
   @override
   Widget build(BuildContext context) {
@@ -19,20 +24,31 @@ class Footer extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              problemCard(),
-              problemCard(),
-              problemCard()
+              problemCard( name: 'Coming Soon: SMMA',description:  cardData['smma']),
+              problemCard( name: 'Coming Soon: Full Branding Strategy',description:  cardData['branding']),
+      
             ],
           )
         ],
       ),
     );
   }
-  Container problemCard(){
+  Container problemCard({required String name,required String description}){
     return Container(
       height: 200,
       width: 500,
-      color: Colors.blueAccent,
+      padding: EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: Colors.blueAccent,
+        borderRadius: BorderRadius.all(Radius.circular(20))
+      ),
+      child: Column(
+        children: [
+          Text(name,style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.white),),
+          SizedBox(height: 10,),
+          Text(description,style: TextStyle(color: Colors.white),)
+        ],
+      ),
     );
   }
 }
