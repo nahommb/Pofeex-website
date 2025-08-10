@@ -26,6 +26,7 @@ class Footer extends StatelessWidget {
       // color: const Color.fromARGB(255, 83, 82, 82),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
             width: double.infinity,
@@ -34,7 +35,7 @@ class Footer extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Stay Connected',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold,color: Colors.white,)),
+                Text('Stay Connected',style: TextStyle(fontSize: screenWidth>600?30:25,fontWeight: FontWeight.bold,color: Colors.white,)),
                 // Text('oiujio doawodia paowdpo oiuioiyhwyadctfte oiajdjlmal iwu90dw'),
                 // Text('jwid dpwd0a pa wdawod poaiw0-id 09wjdw ad'),
               ],
@@ -62,7 +63,10 @@ class Footer extends StatelessWidget {
           ),
           SizedBox(height: 70,),
           Text('Get Ready To Grow',style: TextStyle(fontSize: 30,color: Colors.blueAccent),),
-          SelectableText('Supercharge your online growth with a partner who’s dedicated to achieving your goals.'),
+          Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: SelectableText('Supercharge your online growth with a partner who’s dedicated to achieving your goals.'),
+          ),
           SizedBox(height: 10,),
             SizedBox(
                   height: 45,
@@ -85,8 +89,8 @@ class Footer extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('All right resrerved 2025'),
-                  Text('Designed and Developed by Nahom M'),
+                  Text('All right resrerved 2025',style: TextStyle(fontSize: screenWidth>600?15:10),),
+                  Text('Designed and Developed by Nahom M',style: TextStyle(fontSize: screenWidth>600?15:10),),
                   
                 ],
               ),

@@ -47,7 +47,7 @@ Map<dynamic,dynamic> serviceData = {
           ),
           SizedBox(height: 100,),
           Text('Why choose Pofeex',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.blueAccent),),
-          Text('Local, Affordable, Result',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),),
+          Text('Local, Affordable, Result',style: TextStyle(fontSize: screenWidth>600?30:25,fontWeight: FontWeight.bold),),
           SizedBox(height: 20,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
