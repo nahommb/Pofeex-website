@@ -52,7 +52,7 @@ class HomeWidget extends StatelessWidget {
   Container landingText(double screenWidth) {
     return Container(
           // color: Colors.brown,
-          width: screenWidth>700?screenWidth*0.5:screenWidth*0.8,
+          width: screenWidth>700?screenWidth*0.5:null,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,

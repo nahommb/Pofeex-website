@@ -12,7 +12,7 @@ class CustomAppBar extends StatelessWidget {
       color: Colors.black,
       child: Row(
         children: [
-          Image.asset("images/logo.png",)
+          Image.asset("assets/images/logo.png",)
           
         ],
       ),

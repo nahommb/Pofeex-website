@@ -49,13 +49,16 @@ class Footer extends StatelessWidget {
               problemCard( name: 'Coming Soon: Full Branding Strategy',description:  cardData['branding']),
       
             ],
-          ):Column(
-            children: [
-                   problemCard( name: 'Coming Soon: SMMA',description:  cardData['smma']),
-                   SizedBox(height: 20,),
-              problemCard( name: 'Coming Soon: Full Branding Strategy',description:  cardData['branding']),
-      
-            ],
+          ):Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                     problemCard( name: 'Coming Soon: SMMA',description:  cardData['smma']),
+                     SizedBox(height: 20,),
+                problemCard( name: 'Coming Soon: Full Branding Strategy',description:  cardData['branding']),
+                  
+              ],
+            ),
           ),
           SizedBox(height: 70,),
           Text('Get Ready To Grow',style: TextStyle(fontSize: 30,color: Colors.blueAccent),),
@@ -96,8 +99,8 @@ class Footer extends StatelessWidget {
 
   Container problemCard({required String name,required String description}){
     return Container(
-      height: 200,
-      width: 500,
+      height: 220,
+      width:400,
       padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: const Color.fromARGB(255, 81, 117, 179),

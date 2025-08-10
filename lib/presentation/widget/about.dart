@@ -82,6 +82,7 @@ Map<dynamic,dynamic> serviceData = {
   Container serviceCard({required String name,required IconData iconData,required String description}) {
     return Container(
               // height: 400,
+              padding: EdgeInsets.all(20),
               width: 400,
               // color: Colors.blueAccent,
               child: Column(
