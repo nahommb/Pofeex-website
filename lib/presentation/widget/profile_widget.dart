@@ -45,7 +45,7 @@ class HomeWidget extends StatelessWidget {
     return Container(
           width: screenWidth*0.32,
           // color: Colors.amber,
-          child: Image.asset('images/growth.png',width: screenWidth*0.2,)
+          child: Image.asset('assets/images/growth.png',width: screenWidth*0.2,)
           );
   }
 
