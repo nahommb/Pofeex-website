@@ -16,7 +16,7 @@ Map<dynamic,dynamic> serviceData = {
   Widget build(BuildContext context) {
 
     final screenHeight = MediaQuery.of(context).size.height;
-
+ final screenWidth= MediaQuery.of(context).size.width;
 
     return Container(
       // height: screenHeight*0.6,
@@ -27,6 +27,7 @@ Map<dynamic,dynamic> serviceData = {
           SizedBox(height: 50,),
           Text("Our Services",style: TextStyle(fontSize: 35,color: Colors.blueAccent,fontWeight: FontWeight.bold),),
           SizedBox(height: 50,),
+          screenWidth>1200?
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -34,6 +35,13 @@ Map<dynamic,dynamic> serviceData = {
               serviceCard(name: 'Content Creation',iconData: Icons.videocam_outlined,description: serviceData['contentCreation']),
               serviceCard(name: 'Business Branding',iconData: Icons.model_training_sharp,description: serviceData['businessBranding']),
              
+             
+            ],
+          ):Column(
+            children: [
+              serviceCard(name: 'Social Media Management',iconData: Icons.mobile_friendly_sharp,description: serviceData['socialMediaMng']),
+              serviceCard(name: 'Content Creation',iconData: Icons.videocam_outlined,description: serviceData['contentCreation']),
+              serviceCard(name: 'Business Branding',iconData: Icons.model_training_sharp,description: serviceData['businessBranding']),
              
             ],
           ),

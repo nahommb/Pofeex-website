@@ -17,6 +17,9 @@ class Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final screenWidth= MediaQuery.of(context).size.width;
+
     return Container(
       // height: 500,
       width: double.infinity,
@@ -38,10 +41,18 @@ class Footer extends StatelessWidget {
             )
             ),
           SizedBox(height: 50,),
+          screenWidth>1200?
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               problemCard( name: 'Coming Soon: SMMA',description:  cardData['smma']),
+              problemCard( name: 'Coming Soon: Full Branding Strategy',description:  cardData['branding']),
+      
+            ],
+          ):Column(
+            children: [
+                   problemCard( name: 'Coming Soon: SMMA',description:  cardData['smma']),
+                   SizedBox(height: 20,),
               problemCard( name: 'Coming Soon: Full Branding Strategy',description:  cardData['branding']),
       
             ],
@@ -65,7 +76,18 @@ class Footer extends StatelessWidget {
                     }, 
                   child: Text("Let's Make It Happen",style: TextStyle(fontSize: 16,color: Colors.white),))
                   ),
-            SizedBox(height: 30,)
+            SizedBox(height: 30,),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0,bottom: 10,right: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('All right resrerved 2025'),
+                  Text('Designed and Developed by Nahom M'),
+                  
+                ],
+              ),
+            )
         ],
       ),
     );
