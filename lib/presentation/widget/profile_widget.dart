@@ -22,7 +22,7 @@ class HomeWidget extends StatelessWidget {
 
     return Container(
       padding: EdgeInsets.only(left: screenWidth>500?50:20,right: screenWidth>500?50:20,),
-      height: screenWidth>700? screenHeight*0.9:screenHeight*0.5,
+      height: screenWidth>700? screenHeight*0.9:screenHeight*0.6,
       width: double.infinity,
       color: Colors.black,
       child:screenWidth>700? Row(
@@ -52,7 +52,7 @@ class HomeWidget extends StatelessWidget {
   Container landingText(double screenWidth) {
     return Container(
           // color: Colors.brown,
-          width: screenWidth>700?screenWidth*0.5:null,
+          width: screenWidth>700?screenWidth*0.5:screenWidth*0.8,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
