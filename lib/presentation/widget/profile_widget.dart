@@ -60,9 +60,9 @@ class HomeWidget extends StatelessWidget {
               Container(
                 // color: Colors.red,
                 width: screenWidth<1200?screenWidth*0.7:1000,  
-                child: Text("Digital Legacey with Building Website and Business Logic",style: TextStyle(fontSize: screenWidth>700?50:20,color: Colors.white),)
+                child: Text("Building a lasting digital legacy by enhancing business value through strong branding and technology.",style: TextStyle(fontSize: screenWidth>700?50:20,color: Colors.white),)
                 ),
-               Text('Abeb beso bela keza desi alew tekerebet chefer mn yadergal gin besow jeso neber',style: TextStyle(fontSize: screenWidth>700?18:12,color: Colors.white),),
+               Text('Helping your business grow rapidly by creating a lasting digital presence with robust, scalable business logic.',style: TextStyle(fontSize: screenWidth>700?18:12,color: const Color.fromARGB(255, 201, 196, 196)),),
                SizedBox(height: 20,),
                SizedBox(
                 height: 45,
