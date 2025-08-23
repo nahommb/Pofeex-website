@@ -11,7 +11,7 @@ class Footer extends StatelessWidget {
  };
 
    void launchTelegram() {
-   html.window.open('https://t.me/Higuzo', '_blank');
+   html.window.open('https://t.me/mogesshaile', '_blank');
   
   }
 
@@ -19,6 +19,7 @@ class Footer extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final screenWidth= MediaQuery.of(context).size.width;
+    final year = DateTime.now().year;
 
     return Container(
       // height: 500,
@@ -83,15 +84,22 @@ class Footer extends StatelessWidget {
                     }, 
                   child: Text("Let's Make It Happen",style: TextStyle(fontSize: 16,color: Colors.white),))
                   ),
-            SizedBox(height: 30,),
+            SizedBox(height: 105,),
             Padding(
               padding: const EdgeInsets.only(left: 20.0,bottom: 10,right: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('All right resrerved 2025',style: TextStyle(fontSize: screenWidth>600?15:10),),
-                  Text('Designed and Developed by Nahom M',style: TextStyle(fontSize: screenWidth>600?15:10),),
-                  
+                  Text('© $year Pofeex. All rights reserved.',style: TextStyle(fontSize: screenWidth>600?15:10),),
+                  Row(
+                    children: [
+                      Text('Designed and Developed by :',style: TextStyle(fontSize: screenWidth>600?15:10),),
+                      TextButton(onPressed: (){
+                        html.window.open('https://t.me/hermela96', '_blank');
+                      }, child: Text('Nahom M',style: TextStyle(color: Colors.blue),))
+                    
+                    ],
+                  ),
                 ],
               ),
             )

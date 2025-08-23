@@ -8,7 +8,7 @@ class HomeWidget extends StatelessWidget {
 
 
   void launchTelegram() {
-   html.window.open('https://t.me/Higuzo', '_blank');
+   html.window.open('https://t.me/mogesshaile', '_blank');
   
   }
 
